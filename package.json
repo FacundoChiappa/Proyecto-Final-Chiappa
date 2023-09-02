@@ -1,0 +1,33 @@
+{
+  "name": "mi-aplicacion",
+  "version": "1.0.0",
+  "description": "Mi aplicación de escritorio",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "electron:build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.example.taskapp",
+    "productName": "Task App",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "devDependencies": {
+    "electron": "^25.3.2",
+    "electron-builder": "^24.6.3"
+  },
+  "dependencies": {
+    "electron-notification-state": "^1.0.0"
+  }
+}
